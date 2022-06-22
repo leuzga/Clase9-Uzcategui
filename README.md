@@ -1,5 +1,5 @@
 # clase9-uzcategui
-# Clase 8 Entregable implementacion componente CardContext
+# Clase 9 Entregable implementacion componente CardContext
 
 ## Getting Started with Create React App
 
