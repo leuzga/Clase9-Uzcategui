@@ -10,6 +10,8 @@ import Stack from "@mui/material/Stack";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import Tooltip from "@mui/material/Tooltip";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { blue } from '@mui/material/colors';
 
 export interface IitemStock {
   stockAvailable: number;
@@ -26,7 +28,7 @@ const ItemCount: React.FC<IitemStock> = ({ stockAvailable, onAdd }) => {
   ) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
-
+  const info = blue["A200"];
   const vertical = "top";
   const horizontal = "right";
   const { count, increment, decrement, reset } = useCounter(0);
@@ -120,8 +122,8 @@ const ItemCount: React.FC<IitemStock> = ({ stockAvailable, onAdd }) => {
             </Button>
           </Tooltip>
         </ButtonGroup>
-        <Button variant="outlined" onClick={() => handlerClickCart()}>
-          Agregar al Carrito
+        <Button variant="contained" size="medium" onClick={() => handlerClickCart()} sx={{ backgroundColor: `${info}`}}>
+          <AddShoppingCartIcon /> Agregar al Carrito
         </Button>
       </Box>
       <Stack spacing={2} sx={{ width: "100%" }}>

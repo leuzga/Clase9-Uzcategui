@@ -7,15 +7,14 @@ import Home from './components/Home/Home';
 import Error404 from './components/Error/Error404';
 import ItemDetailContainer from './components/Containers/ItemListContainer/ItemDetailContainer';
 import { ContextCard } from './Context/CardContext';
-
-
+import CartView from './components/CartView/CartView';
 
 function App() {
 
   const { totalUnits } = React.useContext(ContextCard);
 
-
   return (
+
     <div className="App">
       <NavBar quantityProduct={totalUnits} />
       <Routes>
@@ -23,7 +22,8 @@ function App() {
         <Route path='/Home' element={<Navigate to={"/"} replace />} />
         <Route path='/:id' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/detail:id' element={<ItemDetailContainer />} /> 
+        <Route path='/detail:id' element={<ItemDetailContainer />} />
+        <Route path='/CartView' element={<CartView />} />
         <Route path='/*' element={<Error404 />} />        
       </Routes>
       <footer className='App-footer'>

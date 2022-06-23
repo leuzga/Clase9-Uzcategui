@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const ItemCard: React.FC<any> = ({dataJson}) => {
   return (
-    <Card sx={{ maxWidth: 345, objectFit: "contain", border: "none" }} variant="outlined" >
+    <Card sx={{ maxWidth: 345, objectFit: "contain", border: "none", backgroundColor: "transparent" }} variant="outlined" >
       <Paper elevation={3} sx={{height: "97%", width: "97%", border: "1px solid #dfdfdf"}}>
       <Link to={"/detail"+ dataJson.id} style={{ textDecoration: 'none' }}>  
       <CardActionArea sx={{height: "100%", border: "none" }}>
